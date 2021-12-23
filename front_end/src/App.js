@@ -1,10 +1,10 @@
 import React from "react";
+import TopBar from "./components/topbar/TopBar";
 
 const App = () => {
   return (
-    <div className="container">
-      <div className="btn btn-primary">Hello There</div>
-      this is not a test
+    <div className="App">
+      <TopBar />
     </div>
   );
 };
