@@ -81,8 +81,8 @@ const Chart = () => {
             stroke="#0D00FF"
             activeDot={{ r: 8 }}
           />
-          <Line type="monotone" dataKey="cost" stroke="#FF0404" />
-          <Line type="monotone" dataKey="Gross_Profit" stroke="#FFA704" />
+          <Line type="monotone" dataKey="cost" stroke="#00FF73" />
+          <Line type="monotone" dataKey="Gross_Profit" stroke="#FF0464" />
         </LineChart>
       </ResponsiveContainer>
     </div>
