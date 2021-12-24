@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowDownwardSharp } from "@mui/icons-material";
+import { ArrowDownwardSharp, ArrowUpwardSharp } from "@mui/icons-material";
 
 import "./featuredInfo.css";
 
@@ -12,6 +12,26 @@ const featuredInfo = () => {
           <span className="featuredMoney">10,000 LKR</span>
           <span className="featuredMoneyRate">
             -11.4 <ArrowDownwardSharp />
+          </span>
+        </div>
+        <span className="featuredSub">Compared to last month</span>
+      </div>
+      <div className="featuredItem">
+        <span className="featuredTitle">Sales</span>
+        <div className="featuredMoneyContainer">
+          <span className="featuredMoney">25,000 LKR</span>
+          <span className="featuredMoneyRate">
+            -1.2 <ArrowDownwardSharp />
+          </span>
+        </div>
+        <span className="featuredSub">Compared to last month</span>
+      </div>
+      <div className="featuredItem">
+        <span className="featuredTitle">Cost</span>
+        <div className="featuredMoneyContainer">
+          <span className="featuredMoney">15,000 LKR</span>
+          <span className="featuredMoneyRate">
+            +2.5 <ArrowUpwardSharp />
           </span>
         </div>
         <span className="featuredSub">Compared to last month</span>
