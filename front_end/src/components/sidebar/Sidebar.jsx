@@ -18,32 +18,32 @@ const Sidebar = () => {
         <div className="sidebarMenu">
           <h5 className="sidebarTitle">Dashboard</h5>
           <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <Home />
+            <li className="sidebarListItem active">
+              <Home className="sidebarIcon" />
               Home
             </li>
             <li className="sidebarListItem">
-              <DynamicFeed />
-              Post Management
+              <DynamicFeed className="sidebarIcon" />
+              Post
             </li>
             <li className="sidebarListItem">
-              <Person />
-              User Management
+              <Person className="sidebarIcon" />
+              User
             </li>
             <li className="sidebarListItem">
-              <VolunteerActivism />
-              Donation Management
+              <VolunteerActivism className="sidebarIcon" />
+              Donation
             </li>
             <li className="sidebarListItem">
-              <StickyNote2 />
+              <StickyNote2 className="sidebarIcon" />
               Notice Board
             </li>
             <li className="sidebarListItem">
-              <LocalGroceryStore />
+              <LocalGroceryStore className="sidebarIcon" />
               Shop
             </li>
             <li className="sidebarListItem">
-              <Sell />
+              <Sell className="sidebarIcon" />
               Advertising
             </li>
           </ul>
