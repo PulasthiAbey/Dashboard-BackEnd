@@ -42,29 +42,18 @@ const Sidebar = () => {
               <Person className="sidebarIcon" />
               User
             </li>
-            <li className="sidebarListItem">
-              <LocalGroceryStore className="sidebarIcon" />
-              Shop
-            </li>
+
             <li className="sidebarListItem">
               <Sell className="sidebarIcon" />
               Advertising
             </li>
           </ul>
 
-          <h5 className="sidebarTitle">Quick Menu</h5>
+          <h5 className="sidebarTitle">Shop & Details</h5>
           <ul className="sidebarList">
             <li className="sidebarListItem">
-              <Home className="sidebarIcon" />
-              Home
-            </li>
-            <li className="sidebarListItem">
-              <DynamicFeed className="sidebarIcon" />
-              Post
-            </li>
-            <li className="sidebarListItem">
-              <Person className="sidebarIcon" />
-              User
+              <LocalGroceryStore className="sidebarIcon" />
+              Shop
             </li>
             <li className="sidebarListItem">
               <VolunteerActivism className="sidebarIcon" />
@@ -74,13 +63,21 @@ const Sidebar = () => {
               <StickyNote2 className="sidebarIcon" />
               Notice Board
             </li>
+          </ul>
+
+          <h5 className="sidebarTitle">Notifications</h5>
+          <ul className="sidebarList">
             <li className="sidebarListItem">
               <LocalGroceryStore className="sidebarIcon" />
-              Shop
+              Mail
             </li>
             <li className="sidebarListItem">
-              <Sell className="sidebarIcon" />
-              Advertising
+              <VolunteerActivism className="sidebarIcon" />
+              Feedback
+            </li>
+            <li className="sidebarListItem">
+              <StickyNote2 className="sidebarIcon" />
+              Message
             </li>
           </ul>
         </div>
