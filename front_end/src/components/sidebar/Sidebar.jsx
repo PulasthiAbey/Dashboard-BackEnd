@@ -7,6 +7,9 @@ import {
   StickyNote2,
   LocalGroceryStore,
   Sell,
+  Email,
+  Feedback,
+  Message,
 } from "@mui/icons-material";
 
 import "./sidebar.css";
@@ -68,15 +71,15 @@ const Sidebar = () => {
           <h5 className="sidebarTitle">Notifications</h5>
           <ul className="sidebarList">
             <li className="sidebarListItem">
-              <LocalGroceryStore className="sidebarIcon" />
+              <Email className="sidebarIcon" />
               Mail
             </li>
             <li className="sidebarListItem">
-              <VolunteerActivism className="sidebarIcon" />
+              <Feedback className="sidebarIcon" />
               Feedback
             </li>
             <li className="sidebarListItem">
-              <StickyNote2 className="sidebarIcon" />
+              <Message className="sidebarIcon" />
               Message
             </li>
           </ul>
