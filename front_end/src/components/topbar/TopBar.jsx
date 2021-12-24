@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import { NotificationsNone, Language, Settings } from "@mui/icons-material";
-
 import "./topbar.css";
 
 const TopBar = () => {
@@ -22,7 +21,11 @@ const TopBar = () => {
           <div className="topbarIconContainer">
             <Settings />
           </div>
-          <img className="topAvatar" src="../assets/images/avatar.jpg" alt="" />
+          <img
+            className="topAvatar"
+            src={require("../assets/images/avatar.jpg")}
+            alt="Avatar"
+          />
         </div>
       </div>
     </div>
