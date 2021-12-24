@@ -60,7 +60,7 @@ const Chart = () => {
   return (
     <div className="chart">
       <h4 className="chartTitle">Sales & Analytics</h4>
-      <ResponsiveContainer width="100%" aspect={2 / 1}>
+      <ResponsiveContainer width="100%" aspect={3 / 1}>
         <LineChart
           data={data}
           margin={{
