@@ -28,10 +28,12 @@ const Sidebar = () => {
                 Home
               </li>
             </Link>
-            <li className="sidebarListItem">
-              <DynamicFeed className="sidebarIcon" />
-              Analytics
-            </li>
+            <Link to="/analytics" className="link">
+              <li className="sidebarListItem">
+                <DynamicFeed className="sidebarIcon" />
+                Analytics
+              </li>
+            </Link>
             <Link to="/products" className="link">
               <li className="sidebarListItem">
                 <Person className="sidebarIcon" />

@@ -17,6 +17,7 @@ import NewUser from "./pages/newUser/NewUser";
 import ProductList from "./pages/productList/ProductList";
 import Product from "./pages/product/Product";
 import NewProduct from "./pages/newProduct/NewProduct";
+import Chart from "./components/chart/Chart";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -90,6 +91,7 @@ const App = () => {
             <Route path="/products" element={<ProductList />} />
             <Route path="/product/:productId" element={<Product />} />
             <Route path="/newproduct" element={<NewProduct />} />
+            <Route path="/analytics" element={<Chart />} />
           </Routes>
         </div>
       </Router>
