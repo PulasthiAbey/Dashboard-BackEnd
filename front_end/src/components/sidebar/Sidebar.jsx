@@ -44,11 +44,12 @@ const Sidebar = () => {
 
           <h5 className="sidebarTitle">Quick Menu</h5>
           <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <DynamicFeed className="sidebarIcon" />
-              Post
-            </li>
-
+            <Link to="/products" className="link">
+              <li className="sidebarListItem">
+                <DynamicFeed className="sidebarIcon" />
+                Post
+              </li>
+            </Link>
             <Link to="/users" className="link">
               <li className="sidebarListItem">
                 <Person className="sidebarIcon" />

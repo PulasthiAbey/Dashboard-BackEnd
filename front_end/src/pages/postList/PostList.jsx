@@ -4,7 +4,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import { DeleteOutline } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import { productRows } from "../../dummyData";
-import "./post.css";
+import "./postList.css";
 
 const PostList = () => {
   const [data, setData] = useState(productRows);
