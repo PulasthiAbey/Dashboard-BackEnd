@@ -24,8 +24,3 @@ This is the repository for the Dashboard Design and NodeJs Backend for ***Solita
 * SideBar Background Colour: `#DCF6FF`
 
 ## Code Resource Details
-
-## Libraries
-
-* Material UI Is been used for the icons and values `@mui/*`
-* Recharts used for the charting purposes `recharts`
