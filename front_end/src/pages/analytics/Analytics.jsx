@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Chart from "../../components/chart/Chart";
 
-const Analytics = () => {
+import "./analytics.css";
+
+const ProductList = () => {
   return (
     <div className="analytics">
-      <Chart /> 
+      <Chart />
     </div>
   );
 };
 
-export default Analytics;
+export default ProductList;
