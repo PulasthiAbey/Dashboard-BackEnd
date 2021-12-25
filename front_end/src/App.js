@@ -16,6 +16,7 @@ import User from "./pages/userPage/User";
 import NewUser from "./pages/newUser/NewUser";
 import ProductList from "./pages/productList/ProductList";
 import Product from "./pages/product/Product";
+import NewProduct from "./pages/newProduct/NewProduct";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -87,8 +88,8 @@ const App = () => {
             <Route path="/user/:userId" element={<User />} />
             <Route path="/newUser" element={<NewUser />} />
             <Route path="/products" element={<ProductList />} />
-            <Route path="/products/productId" element={<Product />} />
-            <Route path="/newproduct" element={<Product />} />
+            <Route path="/product/:productId" element={<Product />} />
+            <Route path="/newproduct" element={<NewProduct />} />
           </Routes>
         </div>
       </Router>
