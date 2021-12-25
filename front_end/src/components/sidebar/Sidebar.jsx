@@ -11,6 +11,7 @@ import {
   Feedback,
   Message,
 } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 import "./sidebar.css";
 
@@ -41,10 +42,13 @@ const Sidebar = () => {
               <DynamicFeed className="sidebarIcon" />
               Post
             </li>
-            <li className="sidebarListItem">
-              <Person className="sidebarIcon" />
-              User
-            </li>
+
+            <Link to="/users" className="link">
+              <li className="sidebarListItem">
+                <Person className="sidebarIcon" />
+                Users
+              </li>
+            </Link>
 
             <li className="sidebarListItem">
               <Sell className="sidebarIcon" />

@@ -12,11 +12,11 @@ const NewUser = () => {
         </div>
         <div className="newUserItem">
           <label>Full Name</label>
-          <input type="text" placeholder="John Smith" />
+          <input type="text" placeholder="John Doe" />
         </div>
         <div className="newUserItem">
           <label>Email</label>
-          <input type="email" placeholder="john@gmail.com" />
+          <input type="email" placeholder="johndoe@gmail.com" />
         </div>
         <div className="newUserItem">
           <label>Password</label>
@@ -24,11 +24,11 @@ const NewUser = () => {
         </div>
         <div className="newUserItem">
           <label>Phone</label>
-          <input type="text" placeholder="+1 123 456 78" />
+          <input type="text" placeholder="+94771245783" />
         </div>
         <div className="newUserItem">
           <label>Address</label>
-          <input type="text" placeholder="New York | USA" />
+          <input type="text" placeholder="Colombo | Sri Lanka" />
         </div>
         <div className="newUserItem">
           <label>Gender</label>
