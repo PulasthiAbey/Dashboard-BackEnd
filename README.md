@@ -17,6 +17,7 @@ This is the repository for the Dashboard Design and NodeJs Backend for ***Solita
 ### Colors
 
 ***Main Colours***
+
 1. `#00008B`
 2. `#ADD8E6`
 3. `#800000`

@@ -12,6 +12,8 @@ import SideBar from "./components/sidebar/Sidebar";
 import TopBar from "./components/topbar/TopBar";
 import Home from "./pages/home/Home";
 import UserList from "./pages/userList/UserList";
+import User from "./pages/userPage/User";
+import NewUser from "./pages/newUser/NewUser";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -80,6 +82,8 @@ const App = () => {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/users" element={<UserList />} />
+            <Route path="/user/:userId" element={<User />} />
+            <Route path="/newUser" element={<NewUser />} />
           </Routes>
         </div>
       </Router>
