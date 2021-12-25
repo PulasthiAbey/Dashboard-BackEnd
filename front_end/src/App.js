@@ -18,6 +18,9 @@ import ProductList from "./pages/productList/ProductList";
 import Product from "./pages/product/Product";
 import NewProduct from "./pages/newProduct/NewProduct";
 import Analytics from "./pages/analytics/Analytics";
+import Post from "./pages/post/Post";
+import PostList from "./pages/postList/PostList";
+import NewPost from "./pages/newPost/NewPost";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -92,6 +95,9 @@ const App = () => {
             <Route path="/product/:productId" element={<Product />} />
             <Route path="/newproduct" element={<NewProduct />} />
             <Route path="/analytics" element={<Analytics />} />
+            <Route path="/posts" element={<PostList />} />
+            <Route path="/posts/:postId" element={<Post />} />
+            <Route path="/newpost" element={<NewPost />} />
           </Routes>
         </div>
       </Router>
