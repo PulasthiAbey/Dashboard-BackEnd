@@ -15,11 +15,22 @@
     justify-content: space-between;
 }
 
+/* .topLeft{
+    justify-content: center;
+} */
+
 .logo {
     font-weight: bold;
     font-size: 30px;
     color: darkblue;
     cursor: pointer;
+}
+
+.logoImage{
+    height: 30px;
+    width: 30px;
+    justify-content: center;
+    align-items: center;
 }
 
 .topRight {

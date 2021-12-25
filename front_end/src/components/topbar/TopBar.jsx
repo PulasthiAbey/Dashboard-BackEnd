@@ -11,6 +11,7 @@ const TopBar = () => {
       <div className="topbarWrapper">
         <Link to="/" className="link">
           <div className="topLeft">
+            {/* <img className="logoImage" src={require("../assets/images/icon.png")} /> */}
             <span className="logo">SolitarIT</span>
           </div>
         </Link>
