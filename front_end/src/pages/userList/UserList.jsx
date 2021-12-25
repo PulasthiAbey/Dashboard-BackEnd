@@ -29,8 +29,6 @@ const UserList = () => {
       description: "This column has a value getter and is not sortable.",
       sortable: false,
       width: 160,
-      valueGetter: (params) =>
-        `${params.row.firstName || ""} ${params.row.lastName || ""}`,
     },
   ];
 
@@ -46,7 +44,17 @@ const UserList = () => {
     { id: 9, lastName: "Roxie", firstName: "Harvey", age: 65 },
   ];
 
-  return <div></div>;
+  return (
+    <div className="userList">
+      <DataGrid
+        rows={data}
+        disableSelectionOnClick
+        columns={columns}
+        pageSize={8}
+        checkboxSelection
+      />
+    </div>
+  );
 };
 
 export default UserList
