@@ -154,7 +154,7 @@ const UserList = () => {
   return (
     <div className="userList">
       <DataGrid
-        rows={rows}
+        rows={data}
         disableSelectionOnClick
         columns={columns}
         pageSize={8}

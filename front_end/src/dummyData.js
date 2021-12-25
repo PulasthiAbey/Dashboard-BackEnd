@@ -68,92 +68,82 @@ export const userData = [
     {
       id: 1,
       username: "Jon Snow",
-      avatar:
-        "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      avatar: require("./components/assets/images/user.png"),
       email: "jon@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      transaction: "125,000 LKR",
     },
     {
       id: 2,
       username: "Jon Snow",
-      avatar:
-        "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      avatar: require("./components/assets/images/user.png"),
       email: "jon@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      transaction: "145,000 LKR",
     },
     {
       id: 3,
       username: "Jon Snow",
-      avatar:
-        "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      avatar: require("./components/assets/images/user.png"),
       email: "jon@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      transaction: "142,000 LKR",
     },
     {
       id: 4,
       username: "Jon Snow",
-      avatar:
-        "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      avatar: require("./components/assets/images/user.png"),
       email: "jon@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      transaction: "145,000 LKR",
     },
     {
       id: 5,
       username: "Jon Snow",
-      avatar:
-        "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      avatar: require("./components/assets/images/user.png"),
       email: "jon@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      transaction: "145,000 LKR",
     },
     {
       id: 6,
       username: "Jon Snow",
-      avatar:
-        "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      avatar: require("./components/assets/images/user.png"),
       email: "jon@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      transaction: "145,000 LKR",
     },
     {
       id: 7,
       username: "Jon Snow",
-      avatar:
-        "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      avatar: require("./components/assets/images/user.png"),
       email: "jon@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      transaction: "145,000 LKR",
     },
     {
       id: 8,
       username: "Jon Snow",
-      avatar:
-        "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      avatar: require("./components/assets/images/user.png"),
       email: "jon@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      transaction: "145,000 LKR",
     },
     {
       id: 9,
       username: "Jon Snow",
-      avatar:
-        "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      avatar: require("./components/assets/images/user.png"),
       email: "jon@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      transaction: "145,000 LKR",
     },
     {
       id: 10,
       username: "Jon Snow",
-      avatar:
-        "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      avatar: require("./components/assets/images/user.png"),
       email: "jon@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      transaction: "145,000 LKR",
     },
   ];
 
