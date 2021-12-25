@@ -7,10 +7,11 @@ import {
 } from "./redux/actions/chartActions";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import "./App.css";
 import SideBar from "./components/sidebar/Sidebar";
 import TopBar from "./components/topbar/TopBar";
 import Home from "./pages/home/Home";
-import "./App.css";
+import UserList from "./pages/userList/UserList";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -71,17 +72,18 @@ const App = () => {
   }, []);
 
   return (
-    <Router className="App">
-      <TopBar />
-      <div className="app-container">
-        <SideBar />
-        <Routes>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Routes>
-      </div>
-    </Router>
+    <div className="App">
+      <Router>
+        <TopBar />
+        <div className="app-container">
+          <SideBar />
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/users" element={<UserList />} />
+          </Routes>
+        </div>
+      </Router>
+    </div>
   );
 };
 
