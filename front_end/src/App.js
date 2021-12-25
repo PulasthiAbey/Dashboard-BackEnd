@@ -1,16 +1,15 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-
 import {
   setChartData,
   setChartTitle,
   setChartLineName,
 } from "./redux/actions/chartActions";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import SideBar from "./components/sidebar/Sidebar";
 import TopBar from "./components/topbar/TopBar";
 import Home from "./pages/home/Home";
-
 import "./App.css";
 
 const App = () => {
@@ -72,13 +71,17 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
+    <Router className="App">
       <TopBar />
       <div className="app-container">
         <SideBar />
-        <Home />
+        <Routes>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 };
 
