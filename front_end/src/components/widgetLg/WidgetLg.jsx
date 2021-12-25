@@ -19,7 +19,7 @@ const WidgetLg = () => {
         <tr className="widgetLgTr">
           <td className="widgetLgUser">
             <img
-              src="https://images.pexels.com/photos/4172933/pexels-photo-4172933.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              src={require("../assets/images/man.jpg")}
               alt=""
               className="widgetLgImg"
             />

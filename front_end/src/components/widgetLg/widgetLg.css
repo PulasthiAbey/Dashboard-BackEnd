@@ -12,15 +12,12 @@
 
 .widgetLgTable{
   width: 100%;
-  border-spacing: 20px;
+  border-spacing: 30px;
+  padding: 10px;
 }
 
 .widgetLgTh{
   text-align: left;
-}
-
-.widgetLgTr{
-  
 }
 
 .widgetLgUser{
@@ -34,7 +31,9 @@
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 10px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .widgetLgDate,.widgetLgAmount{
