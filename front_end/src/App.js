@@ -1,7 +1,11 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-import { setChartData } from "./redux/actions/chartActions";
+import {
+  setChartData,
+  setChartTitle,
+  setChartLineName,
+} from "./redux/actions/chartActions";
 
 import SideBar from "./components/sidebar/Sidebar";
 import TopBar from "./components/topbar/TopBar";
@@ -15,48 +19,52 @@ const App = () => {
     const data = [
       {
         name: "June",
-        cost: 40000,
-        sales: 24000,
-        Gross_Profit: -16000,
+        COST: 40000,
+        SALES: 24000,
+        GP: -16000,
       },
       {
         name: "July",
-        cost: 30000,
-        sales: 13980,
-        Gross_Profit: -16020,
+        COST: 30000,
+        SALES: 13980,
+        GP: -16020,
       },
       {
         name: "August",
-        cost: 20000,
-        sales: 98000,
-        Gross_Profit: 78000,
+        COST: 20000,
+        SALES: 98000,
+        GP: 78000,
       },
       {
         name: "September",
-        cost: 27800,
-        sales: 39008,
-        Gross_Profit: 11208,
+        COST: 27800,
+        SALES: 39008,
+        GP: 11208,
       },
       {
         name: "October",
-        cost: 18900,
-        sales: 48000,
-        Gross_Profit: 29100,
+        COST: 18900,
+        SALES: 48000,
+        GP: 29100,
       },
       {
         name: "November",
-        cost: 23900,
-        sales: 38000,
-        Gross_Profit: 14100,
+        COST: 23900,
+        SALES: 38000,
+        GP: 14100,
       },
       {
         name: "December",
-        cost: 34900,
-        sales: 43000,
-        Gross_Profit: 8100,
+        COST: 34900,
+        SALES: 43000,
+        GP: 8100,
       },
     ];
+    const chartName = "Sales & Analytics";
+    const chartLineName = ["SALES", "COST", "GP"];
     dispatch(setChartData(data));
+    dispatch(setChartTitle(chartName));
+    dispatch(setChartLineName(chartLineName));
   };
 
   useEffect(() => {
