@@ -22,10 +22,12 @@ const Sidebar = () => {
         <div className="sidebarMenu">
           <h5 className="sidebarTitle">Dashboard</h5>
           <ul className="sidebarList">
-            <li className="sidebarListItem active">
-              <Home className="sidebarIcon" />
-              Home
-            </li>
+            <Link to="/" className="link">
+              <li className="sidebarListItem active">
+                <Home className="sidebarIcon" />
+                Home
+              </li>
+            </Link>
             <li className="sidebarListItem">
               <DynamicFeed className="sidebarIcon" />
               Analytics

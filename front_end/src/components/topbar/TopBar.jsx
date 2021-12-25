@@ -1,15 +1,19 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import { NotificationsNone, Language, Settings } from "@mui/icons-material";
+import { Link } from "react-router-dom";
+
 import "./topbar.css";
 
 const TopBar = () => {
   return (
     <div className="topbar">
       <div className="topbarWrapper">
-        <div className="topLeft">
-          <span className="logo">SolitarIT</span>
-        </div>
+        <Link to="/" className="link">
+          <div className="topLeft">
+            <span className="logo">SolitarIT</span>
+          </div>
+        </Link>
         <div className="topRight">
           <div className="topbarIconContainer">
             <NotificationsNone />
