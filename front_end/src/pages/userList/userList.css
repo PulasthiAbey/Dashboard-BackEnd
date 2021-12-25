@@ -40,5 +40,14 @@
   color: white;
   font-size: 16px;
   margin-bottom: 15px;
-  flex: 3;
+  flex: 2;
+}
+
+.chartTitle {
+  flex: 2;
+}
+
+.productHeader {
+    display: flex;
+    margin-bottom: 20px;
 }

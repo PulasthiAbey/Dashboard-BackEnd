@@ -64,7 +64,7 @@ const ProductList = () => {
       <div className="productHeader">
         <h4 className="chartTitle">Products</h4>
         <Link to="/newproduct">
-          <button className="productAddButton">Create</button>
+          <button className="productAddButton">New</button>
         </Link>
       </div>
       <DataGrid

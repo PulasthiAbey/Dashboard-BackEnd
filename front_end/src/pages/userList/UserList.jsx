@@ -60,9 +60,12 @@ const UserList = () => {
 
   return (
     <div className="userList">
-      <Link to="/newUser">
-        <button className="userAddButton">Create</button>
-      </Link>
+      <div className="productHeader">
+        <h4 className="chartTitle">User List</h4>
+        <Link to="/newUser">
+          <button className="userAddButton">New</button>
+        </Link>
+      </div>
       <DataGrid
         rows={data}
         disableSelectionOnClick
