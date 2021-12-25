@@ -29,3 +29,25 @@
     color: red;
     cursor: pointer;
 }
+
+.chartTitle {
+  flex: 3;
+}
+
+.productHeader {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.productAddButton{
+  align-items: right;
+  flex: 1;
+  width: 80px;
+  border: none;
+  padding: 5px;
+  background-color: #00008B;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}

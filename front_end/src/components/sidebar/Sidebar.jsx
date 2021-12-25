@@ -32,10 +32,12 @@ const Sidebar = () => {
               <DynamicFeed className="sidebarIcon" />
               Analytics
             </li>
-            <li className="sidebarListItem">
-              <Person className="sidebarIcon" />
-              Sales
-            </li>
+            <Link to="/products" className="link">
+              <li className="sidebarListItem">
+                <Person className="sidebarIcon" />
+                Products
+              </li>
+            </Link>
           </ul>
 
           <h5 className="sidebarTitle">Quick Menu</h5>
