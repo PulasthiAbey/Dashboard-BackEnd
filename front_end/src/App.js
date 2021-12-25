@@ -69,7 +69,7 @@ const App = () => {
 
   useEffect(() => {
     updateReduxStore();
-  }, []);
+  });
 
   return (
     <div className="App">
