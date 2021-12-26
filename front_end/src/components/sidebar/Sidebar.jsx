@@ -44,7 +44,7 @@ const Sidebar = () => {
 
           <h5 className="sidebarTitle">Quick Menu</h5>
           <ul className="sidebarList">
-            <Link to="/products" className="link">
+            <Link to="/posts" className="link">
               <li className="sidebarListItem">
                 <DynamicFeed className="sidebarIcon" />
                 Post
