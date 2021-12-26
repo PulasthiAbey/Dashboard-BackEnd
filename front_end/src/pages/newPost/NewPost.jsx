@@ -6,7 +6,7 @@ const NewPost = () => {
     <div className="newProduct">
       <h1 className="addProductTitle">New Post</h1>
       <form className="addProductForm">
-        <div className="addProductItem">
+        {/* <div className="addProductItem">
           <label>Image</label>
           <input type="file" id="file" />
         </div>
@@ -25,7 +25,8 @@ const NewPost = () => {
             <option value="no">No</option>
           </select>
         </div>
-        <button className="addProductButton">Create</button>
+        <button className="addProductButton">Create</button> */}
+        Post Templates will vary
       </form>
     </div>
   );

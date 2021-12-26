@@ -1,4 +1,4 @@
-.productList{
+.postList{
     flex: 4;
 }
 
@@ -50,4 +50,5 @@
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  margin-right: 20px;
 }
