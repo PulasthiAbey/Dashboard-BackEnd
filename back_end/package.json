@@ -1,0 +1,23 @@
+{
+  "name": "dashboard_backend",
+  "version": "1.0.0",
+  "description": "This is the Backend for the SolitartIT Mobile application and the dashboard",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "npm",
+    "node",
+    "api",
+    "restAPI"
+  ],
+  "author": "Pulasthi Aberathne @ CODEVPRO Pvt. Ltd",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.4.5"
+  },
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
