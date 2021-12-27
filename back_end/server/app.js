@@ -12,6 +12,10 @@ app.use(bodyparser.json());
 app.use(cookieParser());
 app.use(express.static(path.resolve(__dirname, "../front_end/build")));
 
+app.get("/", function (req, res) {
+  res.status(200).send(`Welcome to login , sign-up api`);
+});
+
 app.get("/api", (req, res) => {
   res.json({ message: "Hello from server!" });
 });
