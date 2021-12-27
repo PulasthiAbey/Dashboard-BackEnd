@@ -24,6 +24,8 @@ yarn-error.log*
 #environment
 .dist
 .vscode
+back_end/yarn.lock
+front_end/yarn.lock
 
 #settings
 settings.json
