@@ -4,7 +4,8 @@
   "description": "This is the Backend for the SolitartIT Mobile application and the dashboard",
   "main": "app.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "nodemon server/app.js"
   },
   "keywords": [
     "npm",
