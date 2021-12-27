@@ -16,7 +16,8 @@
   "author": "Pulasthi Aberathne @ CODEVPRO Pvt. Ltd",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^27.4.5"
+    "jest": "^27.4.5",
+    "nodemon": "^2.0.15"
   },
   "dependencies": {
     "express": "^4.17.2"
