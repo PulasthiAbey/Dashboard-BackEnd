@@ -21,9 +21,10 @@ router.get("/viewall", async (req, res) => {
 
 router.get("/get/:name", async (req, res) => {
   try {
-    const product = await Products.findById(req.params.name);
+    const product = await Products.findOne(req.params.name);
     res.json(product);
   } catch (error) {
+    console.log(error); 
     res.json({ message: error });
   }
 });
