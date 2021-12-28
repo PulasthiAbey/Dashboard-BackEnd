@@ -19,7 +19,7 @@ router.get("/viewall", async (req, res) => {
   }
 });
 
-router.get("/getone/:name", async (req, res) => {
+router.get("/get/:name", async (req, res) => {
   try {
     const product = await Products.findById(req.params.name);
     res.json(product);
@@ -28,76 +28,83 @@ router.get("/getone/:name", async (req, res) => {
   }
 });
 
-router.post("/", (req, res, next) => {
-  const product = new Products({
-    _id: new mongoose.Types.ObjectId(),
-    name: req.params.name,
-    type: req.params.type,
-    description: req.params.description,
-    price: req.params.price,
-    quantity: req.params.quantity,
+router.post("/", async (req, res) => {
+  const post = new Suggestions({
+    locationID: crypto.randomBytes(16).toString("hex"),
+    name: req.body.name,
+    description: req.body.description,
   });
-
-  product
-    .save()
-    .then((result) => {
-      console.log("New Product Created Successfully" + result);
-      res.status(200).json(result);
-    })
-    .catch((error) => {
-      console.log("Error occurred while creating a new product");
-      console.log(error);
-      res.status(500).json(error);
-    });
-
-  res.status(201).json({
-    message: "Product created successfully",
-    createdProduct: product,
-  });
+  try {
+    // console.log("Testing the try in the save post item thing", req.body);
+    const savedPost = await post.save();
+    console.log("Object after the save Post call", savedPost);
+    res.json(savedPost);
+  } catch (err) {
+    console.log("err" + err);
+    res.json({ message: "Error While saving the post" });
+    res.status(500).send(err);
+  }
 });
 
-router.get("/:productId", (req, res, next) => {
-  const productId = req.params.productId;
-  Products.findById(productId)
-    .exec()
-    .then((doc) => {
-      console.log(doc);
-      res.status(200).json(doc);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json({ error: err });
-    });
-});
 
-router.patch("/:productId", (req, res, next) => {
-  res.status(200).json({
-    message: "updated Product",
-  });
-});
+// router.post("/", (req, res, next) => {
+//   const product = new Products({
+//     _id: new mongoose.Types.ObjectId(),
+//     name: req.params.name,
+//     type: req.params.type,
+//     description: req.params.description,
+//     price: req.params.price,
+//     quantity: req.params.quantity,
+//   });
 
-router.delete("/:productId", (req, res, next) => {
-  res.status(200).json({
-    message: "deleted Product",
-  });
-});
+//   product
+//     .save()
+//     .then((result) => {
+//       console.log("New Product Created Successfully" + result);
+//       res.status(200).json(result);
+//     })
+//     .catch((error) => {
+//       console.log("Error occurred while creating a new product");
+//       console.log(error);
+//       res.status(500).json(error);
+//     });
+
+//   res.status(201).json({
+//     message: "Product created successfully",
+//     createdProduct: product,
+//   });
+// });
+
+// router.get("/:productId", (req, res, next) => {
+//   const productId = req.params.productId;
+//   Products.findById(productId)
+//     .exec()
+//     .then((doc) => {
+//       console.log(doc);
+//       res.status(200).json(doc);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       res.status(500).json({ error: err });
+//     });
+// });
+
+// router.patch("/:productId", (req, res, next) => {
+//   res.status(200).json({
+//     message: "updated Product",
+//   });
+// });
+
+// router.delete("/:productId", (req, res, next) => {
+//   res.status(200).json({
+//     message: "deleted Product",
+//   });
+// });
 
 module.exports = router;
 
 /*
 
-
-
-
-// specific suggestion retrieve
-router.get("/name", async (req, res) => {
-  try {
-    const suggest = await Suggestions.findById(req.params.name);
-    res.json(suggest);
-  } catch (error) {
-    res.json({ message: error });
-  }
-});
 
 // add a new Guide to the collection
 router.post("/", async (req, res) => {
