@@ -29,18 +29,18 @@ router.get("/get/:name", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  const post = new Suggestions({
-    locationID: crypto.randomBytes(16).toString("hex"),
-    name: req.body.name,
-    description: req.body.description,
+  const product = new Products({
+    _id: new mongoose.Types.ObjectId(),
+    name: req.params.name,
+    type: req.params.type,
+    description: req.params.description,
+    price: req.params.price,
+    quantity: req.params.quantity,
   });
   try {
-    // console.log("Testing the try in the save post item thing", req.body);
-    const savedPost = await post.save();
-    console.log("Object after the save Post call", savedPost);
-    res.json(savedPost);
+    const result = await product.save();
+    res.json(result);
   } catch (err) {
-    console.log("err" + err);
     res.json({ message: "Error While saving the post" });
     res.status(500).send(err);
   }
