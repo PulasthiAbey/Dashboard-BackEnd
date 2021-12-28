@@ -17,6 +17,7 @@ app.get("/", (req, res) => {
 const productsRoutes = require("../routes/shop/products");
 const orderRoute = require("../routes/shop/order");
 
+// Routes 
 app.use("/shop/products", productsRoutes);
 app.use("/shop/order", orderRoute);
 
