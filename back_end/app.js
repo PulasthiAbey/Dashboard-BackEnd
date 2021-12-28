@@ -1,36 +1,36 @@
 const express = require("express");
-const path = require("path");
 const mongoose = require("mongoose");
-const bodyparser = require("body-parser");
-const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
-require("dotenv").config({ path: "../../.env" });
+const cors = require("cors");
+const bodyParser = require("express").json;
+require("dotenv").config();
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 
+// Middleware configuration
 app.use(morgan("dev"));
-app.use(bodyparser.urlencoded({ extended: false }));
-app.use(bodyparser.json());
-app.use(cookieParser());
+app.use(cors());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(bodyParser());
 
-// DB Connection
+// database connections
 mongoose
   .connect(
     "mongodb+srv://" +
       process.env.DB_USER +
       ":" +
       process.env.DB_PASSWD +
-      "@solitarit.yh2j2.mongodb.net/" +
-      process.env.DB_NAME +
-      "?retryWrites=true&w=majority"
+      "@solitarit.yh2j2.mongodb.net/SOLITARIT?retryWrites=true&w=majority",
+    { useNewUrlParser: true },
+    { useUnifiedTopology: true }
   )
-  .then((result) => {
-    console.log("Database Connection Successful");
-    console.log(result);
+  .then(() => {
+    console.log("DB Connected");
   })
-  .catch((error) => {
-    console.log("Error occurred while connecting");
-    console.log(error);
+  .catch((err) => {
+    console.log(err);
   });
 
 // Headers
@@ -52,8 +52,8 @@ app.get("/", (req, res) => {
   res.status(200).send(`Welcome to SOLITART IT Api`);
 });
 
-const productsRoutes = require("../routes/shop/products");
-const orderRoute = require("../routes/shop/order");
+const productsRoutes = require("./api/routes/shop/products");
+const orderRoute = require("./api/routes/shop/order");
 
 // Routes
 app.use("/shop/products", productsRoutes);
@@ -75,4 +75,7 @@ app.use((error, req, res, next) => {
   });
 });
 
-module.exports = app;
+//listening from the server_error
+app.listen(PORT, () => {
+  console.log(`Server Running on http://localhost:${PORT}`);
+});

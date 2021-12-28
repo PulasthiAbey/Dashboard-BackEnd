@@ -1,16 +1,15 @@
 const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
-const Product = require("../../models/shop/Products");
+const Products = require("../../models/shop/Products");
 
 router.get("/", (req, res, next) => {
-  res.status(200).json({
-    message: "Handle GET requests in shop/products route",
-  });
+  res.send("This is the ");
 });
 
+
 router.post("/", (req, res, next) => {
-  const product = new Product({
+  const product = new Products({
     _id: new mongoose.Types.ObjectId(),
     name: req.params.name,
     type: req.params.type,
@@ -23,19 +22,23 @@ router.post("/", (req, res, next) => {
     .save()
     .then((result) => {
       console.log("New Product Created Successfully" + result);
+      res.status(200).json(result);
     })
     .catch((error) => {
       console.log("Error occurred while creating a new product");
-      console.log("Error" + error);
+      console.log(error);
+      res.status(500).json(error);
     });
-  res.status(200).json({
-    message: "Handle POST requests in shop/products route",
+
+  res.status(201).json({
+    message: "Product created successfully",
+    createdProduct: product,
   });
 });
 
 router.get("/:productId", (req, res, next) => {
   const productId = req.params.productId;
-  Product.findById(productId)
+  Products.findById(productId)
     .exec()
     .then((doc) => {
       console.log(doc);
@@ -43,7 +46,7 @@ router.get("/:productId", (req, res, next) => {
     })
     .catch((err) => {
       console.log(err);
-      res.status(500).json(err);
+      res.status(500).json({ error: err });
     });
 });
 
@@ -60,3 +63,60 @@ router.delete("/:productId", (req, res, next) => {
 });
 
 module.exports = router;
+
+/*
+const express = require("express");
+const mongoose = require("mongoose");
+const router = express.Router();
+const Suggestions = require("../models/Suggestions");
+var crypto = require("crypto");
+
+//Get the default connection
+// var db = mongoose.connection;
+
+router.get("/", (req, res) => {
+  res.send("Testing Suggestions");
+});
+
+router.get("/view_all", async (req, res) => {
+  try {
+    console.log("Testing in the View all");
+    const suggest = await Suggestions.find();
+    res.json(suggest);
+  } catch (error) {
+    res.json({
+      message: "Error while finding the Suggestions in the collection",
+    });
+  }
+});
+
+// specific suggestion retrieve
+router.get("/name", async (req, res) => {
+  try {
+    const suggest = await Suggestions.findById(req.params.name);
+    res.json(suggest);
+  } catch (error) {
+    res.json({ message: error });
+  }
+});
+
+// add a new Guide to the collection
+router.post("/", async (req, res) => {
+  const post = new Suggestions({
+    locationID: crypto.randomBytes(16).toString("hex"),
+    name: req.body.name,
+    description: req.body.description,
+  });
+  try {
+    // console.log("Testing the try in the save post item thing", req.body);
+    const savedPost = await post.save();
+    console.log("Object after the save Post call", savedPost);
+    res.json(savedPost);
+  } catch (err) {
+    console.log("err" + err);
+    res.json({ message: "Error While saving the post" });
+    res.status(500).send(err);
+  }
+});
+
+module.exports = router;*/
