@@ -4,7 +4,19 @@ const mongoose = require("mongoose");
 const Products = require("../../models/shop/Products");
 
 router.get("/", (req, res, next) => {
-  res.send("This is the ");
+  res.send("This is the products route for the shop");
+});
+
+router.get("/view_all", async (req, res) => {
+  try {
+    console.log("Viewing all the products");
+    const suggest = await Suggestions.find();
+    res.json(suggest);
+  } catch (error) {
+    res.json({
+      message: "Error while finding the Suggestions in the collection",
+    });
+  }
 });
 
 
@@ -65,18 +77,7 @@ router.delete("/:productId", (req, res, next) => {
 module.exports = router;
 
 /*
-const express = require("express");
-const mongoose = require("mongoose");
-const router = express.Router();
-const Suggestions = require("../models/Suggestions");
-var crypto = require("crypto");
 
-//Get the default connection
-// var db = mongoose.connection;
-
-router.get("/", (req, res) => {
-  res.send("Testing Suggestions");
-});
 
 router.get("/view_all", async (req, res) => {
   try {
