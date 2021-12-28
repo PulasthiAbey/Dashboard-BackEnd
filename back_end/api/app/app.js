@@ -14,4 +14,8 @@ app.get("/", (req, res) => {
   res.status(200).send(`Welcome to SOLITART IT Api`);
 });
 
+const productsRoutes = require("../routes/shop/products");
+
+app.use("/shop/products", productsRoutes);
+
 module.exports = app;
