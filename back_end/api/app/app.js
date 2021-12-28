@@ -12,6 +12,9 @@ app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 app.use(cookieParser());
 
+// DB Connection
+mongoose.connect(process.env.DB_PATH, {useMongoClient: true});
+
 // Headers
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");

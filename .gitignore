@@ -24,6 +24,7 @@ yarn-error.log*
 #environment
 .dist
 .vscode
+nodemon.json
 
 #settings
 settings.json
