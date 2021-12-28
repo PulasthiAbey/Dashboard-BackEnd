@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const bodyparser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
+require("dotenv").config({ path: "../../.env" });
 
 const app = express();
 
@@ -14,7 +15,15 @@ app.use(cookieParser());
 
 // DB Connection
 mongoose
-  .connect(process.env.DB_PATH, { useMongoClient: true })
+  .connect(
+    "mongodb+srv://" +
+      process.env.DB_USER +
+      ":" +
+      process.env.DB_PASSWD +
+      "@solitarit.yh2j2.mongodb.net/" +
+      process.env.DB_NAME +
+      "?retryWrites=true&w=majority"
+  )
   .then((result) => {
     console.log("Database Connection Successful");
     console.log(result);

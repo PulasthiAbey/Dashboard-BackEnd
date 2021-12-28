@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
-const Product = require(".../models/shop/product");
+const Product = require("../../models/shop/Products");
 
 router.get("/", (req, res, next) => {
   res.status(200).json({
@@ -11,7 +11,7 @@ router.get("/", (req, res, next) => {
 
 router.post("/", (req, res, next) => {
   const product = new Product({
-    _id: mongoose.Types.ObjectId,
+    _id: new mongoose.Types.ObjectId(),
     name: req.params.name,
     type: req.params.type,
     description: req.params.description,
@@ -35,16 +35,16 @@ router.post("/", (req, res, next) => {
 
 router.get("/:productId", (req, res, next) => {
   const productId = req.params.productId;
-  if (productId === "special") {
-    res.status(200).json({
-      message: "Special ID Found",
-      id: productId,
+  Product.findById(productId)
+    .exec()
+    .then((doc) => {
+      console.log(doc);
+      res.status(200).json(doc);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
     });
-  } else {
-    res.status(404).json({
-      message: "File not found",
-    });
-  }
 });
 
 router.patch("/:productId", (req, res, next) => {
