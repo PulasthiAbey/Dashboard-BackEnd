@@ -18,6 +18,16 @@ router.post("/", (req, res, next) => {
     price: req.params.price,
     quantity: req.params.quantity,
   });
+
+  product
+    .save()
+    .then((result) => {
+      console.log("New Product Created Successfully" + result);
+    })
+    .catch((error) => {
+      console.log("Error occurred while creating a new product");
+      console.log("Error" + error);
+    });
   res.status(200).json({
     message: "Handle POST requests in shop/products route",
   });
