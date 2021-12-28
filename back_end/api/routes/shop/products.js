@@ -47,7 +47,7 @@ router.post("/", async (req, res) => {
 //     quantity: 250,
 //   });
   try {
-    const result = await productTemp.save();
+    const result = await product.save();
     res.json(result);
   } catch (err) {
     res.json({ message: "Error While saving the post" });
