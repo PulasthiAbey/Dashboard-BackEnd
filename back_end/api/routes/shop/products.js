@@ -19,6 +19,14 @@ router.get("/viewall", async (req, res) => {
   }
 });
 
+router.get("/getone/:name", async (req, res) => {
+  try {
+    const product = await Products.findById(req.params.name);
+    res.json(product);
+  } catch (error) {
+    res.json({ message: error });
+  }
+});
 
 router.post("/", (req, res, next) => {
   const product = new Products({
@@ -79,17 +87,7 @@ module.exports = router;
 /*
 
 
-router.get("/view_all", async (req, res) => {
-  try {
-    console.log("Testing in the View all");
-    const suggest = await Suggestions.find();
-    res.json(suggest);
-  } catch (error) {
-    res.json({
-      message: "Error while finding the Suggestions in the collection",
-    });
-  }
-});
+
 
 // specific suggestion retrieve
 router.get("/name", async (req, res) => {
