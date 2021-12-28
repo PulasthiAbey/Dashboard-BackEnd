@@ -13,7 +13,16 @@ app.use(bodyparser.json());
 app.use(cookieParser());
 
 // DB Connection
-mongoose.connect(process.env.DB_PATH, {useMongoClient: true});
+mongoose
+  .connect(process.env.DB_PATH, { useMongoClient: true })
+  .then((result) => {
+    console.log("Database Connection Successful");
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log("Error occurred while connecting");
+    console.log(error);
+  });
 
 // Headers
 app.use((req, res, next) => {
