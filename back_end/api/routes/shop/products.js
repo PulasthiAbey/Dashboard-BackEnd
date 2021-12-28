@@ -7,14 +7,14 @@ router.get("/", (req, res, next) => {
   res.send("This is the products route for the shop");
 });
 
-router.get("/view_all", async (req, res) => {
+router.get("/viewall", async (req, res) => {
   try {
     console.log("Viewing all the products");
-    const suggest = await Suggestions.find();
-    res.json(suggest);
+    const product = await Products.find();
+    res.json(product);
   } catch (error) {
     res.json({
-      message: "Error while finding the Suggestions in the collection",
+      message: "Error while finding the products in the collection",
     });
   }
 });
