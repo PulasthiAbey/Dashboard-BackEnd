@@ -1,19 +1,19 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/", (req, res) => {
+router.get("/", (req, res, next) => {
   res.status(200).json({
     message: "Handle GET requests in shop/products route",
   });
 });
 
-router.post("/", (req, res) => {
+router.post("/", (req, res, next) => {
   res.status(200).json({
     message: "Handle POST requests in shop/products route",
   });
 });
 
-router.get("/:productId", (req, res) => {
+router.get("/:productId", (req, res, next) => {
   const productId = req.params.productId;
   if (productId === "special") {
     res.status(200).json({
@@ -27,13 +27,13 @@ router.get("/:productId", (req, res) => {
   }
 });
 
-router.patch("/:productId", (req, res) => {
+router.patch("/:productId", (req, res, next) => {
   res.status(200).json({
     message: "updated Product",
   });
 });
 
-router.delete("/:productId", (req, res) => {
+router.delete("/:productId", (req, res, next) => {
   res.status(200).json({
     message: "deleted Product",
   });
