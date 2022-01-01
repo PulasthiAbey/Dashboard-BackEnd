@@ -21,35 +21,28 @@ router.get("/viewall", async (req, res) => {
 
 router.get("/get/:name", async (req, res) => {
   try {
-    const product = await Products.findOne(req.params.name);
+    const product = await Products.find(req.params.name);
     res.json(product);
   } catch (error) {
-    console.log(error); 
-    res.json({ message: error });
+    console.log(error);
+    res.json({ message: "error occurred while getting the value" });
   }
 });
 
 router.post("/", async (req, res) => {
-    const product = new Products({
-      _id: new mongoose.Types.ObjectId(),
-      name: req.params.name,
-      type: req.params.type,
-      description: req.params.description,
-      price: req.params.price,
-      quantity: req.params.quantity,
-    });
-
-//   const productTemp = new Products({
-//     _id: new mongoose.Types.ObjectId(),
-//     name: "Test",
-//     type: "Test Type",
-//     description: "This is a test",
-//     price: 100,
-//     quantity: 250,
-//   });
+  const product = new Products({
+    _id: new mongoose.Types.ObjectId(),
+    name: req.body.name,
+    type: req.body.type,
+    description: req.body.description,
+    price: req.body.price,
+    quantity: req.body.quantity,
+  });
+  console.log(product);
   try {
     const result = await product.save();
     res.json(result);
+    console.log("Saved Successfully");
   } catch (err) {
     res.json({ message: "Error While saving the post" });
     console.log(err);

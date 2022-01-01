@@ -8,11 +8,8 @@ require("dotenv").config();
 const app = express();
 
 // Middleware configuration
-app.use(cors());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-// app.use(bodyParser());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 // database connections
 mongoose
@@ -23,7 +20,7 @@ mongoose
       process.env.DB_PASSWD +
       "@solitarit.yh2j2.mongodb.net/SOLITARIT?retryWrites=true&w=majority",
     { useNewUrlParser: true },
-    { useUnifiedTopology: true }
+    { useUnifiedTopology: false }
   )
   .then(() => {
     console.log("DB Connected");
